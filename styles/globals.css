@@ -42,15 +42,16 @@ h2.author {
   width: 40px;
 }
 
+
+/* LINK THINGS */
+
 .link {
-  color: #fff;
 	text-decoration: none;
 	position: relative;
-	margin: 0 0 0 0;
 	overflow: hidden;
 	display: inline-flex;
 }
-
+ 
 .link:before {
   content: '';
 	width: 0;
@@ -72,6 +73,7 @@ h2.author {
 	bottom:0;
 	transition: margin 0.5s;
 	margin-left:0;
+  color: white;
 }
 
 .link:hover:after {
@@ -83,6 +85,10 @@ h2.author {
 	width:100%;
 	transition: width 0.5s;
 }
+
+
+/* END LINK */
+
 
 div.text {
   float: left;

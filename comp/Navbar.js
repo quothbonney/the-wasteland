@@ -1,7 +1,6 @@
 import DoubleHR from './DoubleHR.js'
 import Link from 'next/link'
 import {useContext, useState} from 'react'
-import { PageContext } from '../lib/context.js';
 
 export default function Navbar({ }) {
   const [page, setPage] = useState(0);
@@ -40,7 +39,7 @@ export default function Navbar({ }) {
 
         <Link href="/whatthethundersaid" prefetch>
           <div className='section-block'>
-              The Burial of the Dead
+              What the Thunder Said
           </div>
         </Link>
       </div>

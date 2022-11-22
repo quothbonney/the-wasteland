@@ -1,3 +1,5 @@
+import InfoLink  from '../comp/InfoLink'
+
 interface TextProps {
   stateChange: (index: number) => void;
 }
@@ -7,7 +9,7 @@ export default function Page({ stateChange }: TextProps ) {
     <main>
       <h3 className="section-title">I. The Burial of the Dead</h3>
       <p>
-        <a href="#" className="link" onClick={ () => stateChange(2)}>April is the cruelest month</a>, breeding<br />
+        <InfoLink id={0} stateChange={stateChange}>April is the cruelest month</InfoLink>, breeding<br />
         Lilacs out of the dead land, mixing<br />
         Memory and desire, stirring<br />
         Dull roots with spring rain.<br />
