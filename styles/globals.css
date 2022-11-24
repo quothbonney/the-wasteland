@@ -1,7 +1,10 @@
 /* libre-caslon-text-regular - latin */
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text&display=swap');
-
+.App {
+  display: flex;
+  height: 100vh;
+}
 :root {
   --cream: #dfd1c3;
 }
@@ -14,6 +17,21 @@
 @font-face {
   font-family: 'Caslon 540 Italics';
   src: url('../public/caslon540italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Frutiger';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Frutiger'), url('../public/Frutiger.woff') format('woff');
+  }
+  
+
+@font-face {
+  font-family: 'Frutiger Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Frutiger Bold'), url('../public/Frutiger_bold.woff') format('woff');
 }
 
 h2.author {
@@ -29,19 +47,74 @@ h2.author {
   text-align: center;
 }
 
+
+/* SIDEBAR */
 .sidebar {
+  align-self: flex-start;
   width: 600px;
-  background: darkslategrey;
+  top: 0px;
+  background: #252526;
   text-align: right;
   padding: 20px;
   color: white;
   transition: 0.4s ease-in;
+  height: 1200px;
+  overflow-y: scroll;
+  color: rgb(204, 201, 193);
 }
 
 .sidebar-closed {
-  width: 40px;
+  width: 80px;
+  height: 100%;
 }
 
+.sidebar__button {
+  background: transparent;
+  float: right;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid white;
+  transition: 0.3s linear;
+}
+
+.sidebar-body {
+  margin: 30px 10px;
+  height: 20px;
+  line-height: 1.5em;;
+}
+
+.info-title {
+  font-family: 'Frutiger Bold';
+  font-size: 28px;
+  text-align: left;
+}
+
+.info-text {
+  font-family: 'Frutiger';
+  text-align: left;
+  font-size: 20px;
+}
+
+/* FADE ANIMATIONS */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+  white-space: nowrap;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 400ms;
+}
 
 /* LINK THINGS */
 
@@ -49,6 +122,7 @@ h2.author {
 	text-decoration: none;
 	position: relative;
 	overflow: hidden;
+  color: #f1eae2;
 	display: inline-flex;
 }
  
@@ -56,6 +130,7 @@ h2.author {
   content: '';
 	width: 0;
 	height: 1px;
+  margin-bottom: 4px;
 	display: block;
 	background: #54b7ce;
 	position:absolute;
@@ -68,8 +143,10 @@ h2.author {
 	width: 100%;
 	height: 1px;
 	display: block;
-	background: #fff;
+	background: #f1eae2;;
+  margin-bottom: 4px;
 	position:absolute;
+  margin-bottom: px;
 	bottom:0;
 	transition: margin 0.5s;
 	margin-left:0;
@@ -89,22 +166,27 @@ h2.author {
 
 /* END LINK */
 
-
 div.text {
-  float: left;
-  margin-left: 20%;
   margin-top: 100px;
-  width: 30%;
+  width: 65%;
+  padding-right: 0%;
+  padding-left: 30%;
   font-size: 1.5em;
   color: var(--cream);
+  display: inline-block;
   line-height: 1.6;
 }
 
 div.info {
+  margin-top: 80px;
+  align-self: flex-start;
+  padding-top: 0%;
   float: right;
-  display: block;
+  position: -webkit-sticky;
+  position: sticky !important; 
+  top: 0;
   margin-left: auto; 
-  margin-right: 0 !important;
+  height: 80%;
 }
 
 .section-row {
