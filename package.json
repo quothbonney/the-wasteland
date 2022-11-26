@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "devStart": "nodemon server.js"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -18,14 +24,23 @@
     "classnames": "^2.3.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
+    "express": "^4.18.2",
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
     "fortawesome": "^0.0.1-security",
+    "mongo-objectid": "^1.2.2",
+    "mongoose": "^6.7.3",
+    "net": "^1.0.2",
     "next": "13.0.4",
+    "objectid": "^3.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-transition-group": "^4.4.5",
     "typescript": "4.9.3",
     "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
   }
 }

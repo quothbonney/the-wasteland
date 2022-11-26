@@ -1,15 +1,23 @@
 import InfoLink  from '../comp/InfoLink'
+import connectMongo from '../utils/connect'
+import AnnotationModel from '../models/annotationModel'
+import { GetServerSideProps } from 'next'
 
 interface TextProps {
-  stateChange: (index: number) => void;
+  stateChange: (index: string) => void;
 }
 
-export default function Page({ stateChange }: TextProps ) {
+type Post = {
+  title: string
+  text: string
+}
+
+function Page({ stateChange }: TextProps) {
   return (
     <main>
-      <h3 className="section-title">I. The Burial of the Dead</h3>
+      <h3 className="section-title">I. The Burial of the Dead </h3>
       <p>
-        <InfoLink id={0} stateChange={stateChange}>April is the cruelest month</InfoLink>, breeding<br />
+        <InfoLink id={'63801e23d6c7104d0632729b'} stateChange={stateChange}>April is the cruelest month</InfoLink>, breeding<br />
         Lilacs out of the dead land, mixing<br />
         Memory and desire, stirring<br />
         Dull roots with spring rain.<br />
@@ -45,3 +53,5 @@ export default function Page({ stateChange }: TextProps ) {
     </main>
   )
 }
+
+export default Page;

@@ -1,0 +1,11 @@
+GET http://localhost:3000/anns/10
+
+###
+
+POST http://localhost:3000/api/test/create
+Content-Type: application/json
+
+{
+  "title": "Auden",
+  "text": "Poem 1"
+}
